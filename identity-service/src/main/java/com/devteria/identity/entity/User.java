@@ -22,10 +22,7 @@ public class User {
 
     String username;
     String password;
-    String firstName;
-    LocalDate dob;
-    String lastName;
-    String city;
+
 
     @ManyToMany
     Set<Role> roles;
