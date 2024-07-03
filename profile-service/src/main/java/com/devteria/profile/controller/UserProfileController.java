@@ -17,11 +17,7 @@ public class UserProfileController {
     UserProfileService userProfileService;
     UserProfileMapper userProfileMapper;
 
-    @PostMapping("/users")
-    public ApiResponse<UserProfileResponse> createUserProfile(@RequestBody ProfileCreationRequest request) {
-        UserProfileResponse response = userProfileService.createUserProfile(request);
-        return ApiResponse.<UserProfileResponse>builder().result(response).build();
-    }
+
     @GetMapping("/users/{profileId}")
     public ApiResponse<UserProfileResponse> getUserProfile(@PathVariable String profileId) {
         UserProfileResponse response = userProfileService.getUserProfile(profileId);
