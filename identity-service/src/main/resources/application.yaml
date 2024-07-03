@@ -5,20 +5,20 @@ server:
 
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/bai2
-    driverClassName: "com.mysql.cj.jdbc.Driver"
+    url: jdbc:mysql://localhost:3309/bai2
+    driverClassName: com.mysql.cj.jdbc.Driver
     username: root
-    password: root
+    password: newpassword
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
 
-
 jwt:
-  signerKey: "+LUlIKJs7FijYDVAduEfpvFhXsKQKEpzkwlXP1HMJDvVSP9l6GWcemINOVWt8qj1"
-  valid-duration: 30 #10s
-  refreshable-duration: 120 #120s
+  signerKey: +LUlIKJs7FijYDVAduEfpvFhXsKQKEpzkwlXP1HMJDvVSP9l6GWcemINOVWt8qj1
+  valid-duration: 30  # Thời gian hợp lệ của JWT là 30 giây
+  refreshable-duration: 120  # Thời gian làm mới JWT là 120 giây
+
 app:
   profile:
-    url: http://localhost:8081/profile
+    url: http://localhost:8081/profile/internal
