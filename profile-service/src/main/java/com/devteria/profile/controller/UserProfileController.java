@@ -19,6 +19,7 @@ public class UserProfileController {
 
 
     @GetMapping("/users/{profileId}")
+
     public ApiResponse<UserProfileResponse> getUserProfile(@PathVariable String profileId) {
         UserProfileResponse response = userProfileService.getUserProfile(profileId);
         return ApiResponse.<UserProfileResponse>builder().result(response).build();
